@@ -1,34 +1,62 @@
 body {
-    font-family: Arial, sans-serif; /* Define a fonte do texto */
-    display: flex; /* Usa flexbox para alinhar elementos */
-    justify-content: center; /* Centraliza o conteúdo horizontalmente */
-    align-items: center; /* Centraliza o conteúdo verticalmente */
-    height: 100vh; /* Define a altura da página para ocupar toda a tela */
-    background-color: #180101; /* Define a cor de fundo */
+    font-family: arial, sans-serif;
+    margin: 0 ;
+    padding: 0 ;
+    background-color: #868686;
+    text-align: center;
+
+
 }
-.card {
-    background: rgb(117, 0, 0); /* Define a cor de fundo do cartão */
-    padding: 20px; /* Adiciona espaçamento interno */
-    border-radius: 10px; /* Arredonda as bordas */
-    box-shadow: 0 16px 32px rgb(255, 255, 255); /* Adiciona uma sombra suave */
-    text-align: center; /* Centraliza o texto dentro do cartão */
-    
+header {
+    background-color: #ffee00;
+    color: whitesmoke;
+    padding: 15px 0px; /*15 px (espacamento interno acima e abaixo,e 0px espacamento interno aos lados)*/
+    font-size: 24px;
+
 }
-.profile-img {
-    border-radius: 50%; /* Transforma a imagem em um círculo */
-    width: 100px; /* Define a largura da imagem */
-    height: 100px; /* Define a altura da imagem */
-    margin-bottom: 10px; /* Adiciona espaço abaixo da imagem */
+nav {
+    background: #007bff;
+    padding: 10px;
+    display: flex; /*flex boxing*/
+    justify-content: space-between;
+    align-items: center;
 }
-button {
-    background: #020101; /* Define a cor de fundo do botão */
-    color: white; /* Define a cor do texto do botão */
-    border: none; /* Remove a borda do botão */
-    padding: 10px 15px; /* Adiciona espaçamento interno */
-    border-radius: 5px; /* Arredonda as bordas do botão */
-    cursor: pointer; /* Muda o cursor para indicar clicabilidade */
+#links-menu{
+    display: flex;
+    gap: 30px;/* */
+
 }
-button:hover {
-    background: #0056b3; /* Altera a cor de fundo ao passar o mouse */
+nav a{/*configura links do menu*/
+    color: rgb(245, 245, 245);
+    text-decoration: none; /*nao decora os links*/
+    padding: 10px 15px;/*10 cima e baixo,15 esquerda direita*/
+    font-size: 18px;
+    background: #0056b3;
+    border-radius: 15px;
+}
+a :hover{
+    cursor: pointer;
 }
 
+
+img {
+    width: 120px;
+    right: auto;
+    margin-left: 180px;
+    border-radius: 10px;
+
+
+}
+.container {
+    width: 80%;
+    background-color: white;
+    border-radius: 10px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: justify;
+
+}
+h2{
+    text-align: center;
+
+}
