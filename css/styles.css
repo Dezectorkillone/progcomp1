@@ -83,9 +83,10 @@ nav a:hover {
 /* Ajuste da imagem do menu */
 img {
     width: 120px;
-    height: auto;
+    height: 120px;
     margin-right: 60px;
     border-radius: 15px;
+    margin-left: 59px;
 }
 
 /* Estilização do conteúdo */
@@ -146,4 +147,26 @@ th {
 
 .em-breve {
     color: red;
+}
+.home:hover{
+    border-radius: 5px;
+    color: #00aeff;
+
+    
+}
+
+.img:hover{
+    border-radius: 10px;
+    opacity: 80%;
+
+}
+#image {
+    background-color: #000000;
+    position: relative;
+    width: 120px; /* Igual à largura da imagem */
+    height: 120px; /* Para manter a imagem centralizada */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px; /* Igual ao da imagem */
 }
