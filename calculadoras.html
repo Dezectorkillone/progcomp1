@@ -6,6 +6,7 @@
         <title>Trote Solidário 2025</title>
         <link rel="icon"  href="images/image.png" />
         <link rel="stylesheet" href="css/styles.css"/>
+        <script src="JS/script.js"> </script>
     </head>
     <body>
         <header>
@@ -17,25 +18,78 @@
                 </div>
             </div>
         </header>
-        <nav><!-- barra de navegação (menu)-->
+        
+        <nav>
             <div id="link-menu">
-                <a href="index.html"> Home</a>
-                <a href="intro.html">Introdução</a>
-                <a href="objetivo.html">Objetivo</a>
-                <a href="formato.html">Formato</a>
-                <a href="gincana.html">Gincana</a>
-                <a href="integracao.html">Integração</a>
-                <a href="observacoes.html">Observações</a>
-                <a href="calculadoras.html">Calculadoras</a>
+                <a href="index.html"class="home">Home</a>
+                <a href="intro.html"class="home">Introdução</a>
+                <a href="objetivo.html"class="home">Objetivo</a>
+                <a href="formato.html"class="home">Formato</a>
+                <a href="gincana.html"class="home">Gincana</a>
+                <a href="integracao.html"class="home">Integração</a>
+                <a href="observacoes.html"class="home">Observações</a>
+                <a href="calculadoras.html"class="home">Calculadoras</a>
             </div>
-            <img src="images/image.png" alt="Trote solidário"/>
+            <div id="image">
+                <img src="images/image.png" alt="Trote solidário" class="img"/>
+            </div>
         </nav>
         <div class="container">
-            <h2> Trote solidário </h2>
-            <p> Construa vitórias fora de camp e jogue pela solidariedade </p>
-            <p> Centro Universitário Municipal de Franca </p>
-            <p> Uni-FACEF </p>
-            <p> Franca-SP </p>
+            <h2> Calculadoras </h2>
+            <form>
+                <div class="campos">
+                    <label> Mascote do time </label>
+                    <input type="number" id="mascote"/>
+                </div>
+                <div class="campos">
+                    <label> Homenagem a um atleta </label>
+                    <input type="number" id="homenagem"/>
+                </div>
+                <div class="campos">
+                    <label> Quantidade de Kits </label>
+                    <input type="number" id="kit"/>
+                </div>
+                 <div class="campos">
+                    <label> Quantidade de latas de suplemento </label>
+                    <input type="number" id="suplemento"/>
+                </div>
+                <div class="campos">
+                    <label>Quantidade de litros de leite</label>
+                    <input type="number" id="leite"/>
+                </div>
+                <div class="campos">
+                    <label>Quantidade de litros de oleo</label>
+                    <input type="number" id="oleo"/>
+                </div>
+                <div class="campos">
+                    <label>Quantidade de pacotes de feijao/2kg </label>
+                    <input type="number" id="feijao2"/>
+                </div>
+                <div class="campos">
+                    <label>Quantidade de pacotes de feijao/1kg </label>
+                    <input type="number" id="feijao1"/>
+                </div>
+                <div class="campos">
+                    <label>Quantidade de pacotes de arroz/5kg </label>
+                    <input type="number" id="arroz5"/>
+                </div>
+                <div class="campos">
+                    <label>Quantidade de pacotes de arroz/1kg </label>
+                    <input type="number" id="arroz1"/>
+                </div>
+                <div class="campos">
+                    <label>Quantidade de pacotes de macarrão </label>
+                    <input type="number" id="macarrao"/>
+                </div>
+
+                <div class="campos">
+                    <button type="button" onclick="calcular()"> Calcular </button>
+                    <label id="soma"> </label>
+                </div>
+            </div>
+            </form>
+            
+            
         </div>
     </body>
 </html>
