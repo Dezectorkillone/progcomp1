@@ -1,19 +1,34 @@
 function calcular(){
    
-    let mascote, homenagem, leite, kit, suplemento, oleo, feijao2, feijao1, arroz5, arroz1, macarrao
+    let mascote, homenagem, leite, kit, suplemento, oleo, feijao2, feijao1, arroz5, arroz1, macarrao, soma, equipe
 
-    mascote = document.getElementById("mascote").value
-    homenagem = document.getElementById("homenagem").value
-    leite = document.getElementById("leite").value
-    kit = document.getElementById("kit").value
-    suplemento = document.getElementById("suplemento").value 
-    oleo = document.getElementById("oleo").value
-    feijao2 = document.getElementById("feijao2").value
-    feijao1 = document.getElementById("feijao1").value
-    arroz5 = document.getElementById("arroz5").value
-    arroz1 = document.getElementById("arroz1").value
-    macarrao = document.getElementById("macarrao").value
-    
-    let soma = Number(mascote) + Number(homenagem) + (2 * Number(leite)) + (30 * Number(kit)) + Number(oleo) + (15 * Number(suplemento)) + (2 * Number(feijao2)) + Number(feijao1) + (5 * Number(arroz5)) + Number(arroz1) + (0.5 * Number(macarrao))
-    document.getElementById("soma").innerHTML = `A soma é ${soma}`
+    mascote = Number(document.getElementById("mascote").value)
+    homenagem = Number(document.getElementById("homenagem").value)
+    leite = Number(document.getElementById("leite").value)
+    kit = Number(document.getElementById("kit").value)
+    suplemento = Number(document.getElementById("suplemento").value )
+    oleo = Number(document.getElementById("oleo").value)
+    feijao2 = Number(document.getElementById("feijao2").value)
+    feijao1 = Number(document.getElementById("feijao1").value)
+    arroz5 = Number(document.getElementById("arroz5").value)
+    arroz1 = Number(document.getElementById("arroz1").value)
+    macarrao = Number(document.getElementById("macarrao").value)
+    equipe = document.getElementById("equipe").value
+     soma = (mascote) + (homenagem) + (2 *(leite)) + (30 * (kit)) +(oleo) + (15 *(suplemento)) + (2 * (feijao2)) + (feijao1) + (5 *(arroz5)) +(arroz1) + (0.5 *(macarrao))
+    if(equipe == "Laranja"){
+            if(kit>= 97){
+             soma = soma + 5000 + (( kit - 97 ) * 30)
+            }
+            else if (kit>= 78){
+                soma = soma + 4000 + (( kit - 78) * 30)
+            }
+            else if (kit>= 49){
+                soma = soma + 2500 + (( kit - 49) * 30)
+            }
+            else if (kit>= 19){
+                soma = soma + 1000 + ((kit - 19) * 30)
+        }
+    }
+   
+    document.getElementById("soma").innerHTML = `Seu time é ${equipe} e a soma é ${soma}`
 }
