@@ -1,18 +1,23 @@
+/* Estilo Geral */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif; /* Fonte moderna e limpa */
     margin: 0;
     padding: 0;
-    background-color: #b6b6b8;
+    background: linear-gradient(135deg, #f7b731, #4a90e2); /* Fundo com amarelo e azul */
+    color: #ffffff; /* Texto branco para contraste */
     text-align: center;
+    line-height: 1.6;
 }
 
-/* Novo Cabeçalho Centralizado */
+/* Cabeçalho Futurista */
 header {
-    background: linear-gradient(90deg, gold, orange);
+    background: linear-gradient(90deg, #f7b731, #ff6f61); /* Amarelo e laranja */
     color: whitesmoke;
     padding: 20px 0;
     text-align: center;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Sombra mais pronunciada */
+    position: relative;
+    z-index: 10;
 }
 
 .header-container {
@@ -26,164 +31,244 @@ header {
 .logo {
     width: 120px;
     height: auto;
-    border-radius: 50%;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 10px; /* Bordas arredondadas suaves */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5); /* Sombra futurista */
+    animation: pulse 2s infinite; /* Animação sutil */
 }
 
-.header-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-h1 {
-    font-size: 32px;
+.header-text h1 {
+    font-size: 36px;
     font-weight: bold;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     margin: 5px 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra no texto */
 }
 
 .subtitle {
     font-size: 18px;
     font-style: italic;
-    color: #f8f8f8;
+    color: #d4d4d4; /* Cinza claro para o subtítulo */
     opacity: 0.9;
     margin-top: -5px;
 }
 
-/* Estilização do menu */
+/* Animação para o logo */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* Menu Futurista */
 nav {
-    background: #007bff;
+    background: linear-gradient(90deg, #4a90e2, #f7b731); /* Azul e amarelo */
     padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 #link-menu {
     display: flex;
-    gap: 30px;
+    gap: 25px;
 }
 
 nav a {
-    color: whitesmoke;
+    color: #ffffff;
     text-decoration: none;
     padding: 10px 15px;
-    font-size: 18px;
-    background: #0056b3;
-    border-radius: 15px;
+    font-size: 16px;
+    background: linear-gradient(90deg, #f7b731, #ff6f61); /* Amarelo e laranja */
+    border-radius: 25px; /* Bordas arredondadas futuristas */
+    transition: all 0.3s ease;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3); /* Sombra leve */
 }
 
 nav a:hover {
-    background: #003d80;
-    transition: 0.3s;
+    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5); /* Sombra mais pronunciada */
 }
 
 /* Ajuste da imagem do menu */
 img {
-    width: 120px;
-    height: 120px;
-    margin-right: 60px;
+    width: 100px;
+    height: 100px;
     border-radius: 15px;
-    margin-left: 59px;
+    margin-right: 20px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5); /* Sombra futurista */
+    transition: all 0.3s ease;
 }
 
-/* Estilização do conteúdo */
+img:hover {
+    transform: rotate(10deg); /* Rotação sutil ao passar o mouse */
+}
+
+/* Conteúdo Principal */
 .container {
     width: 80%;
-    background-color: white;
+    background: linear-gradient(135deg, #4a90e2, #f7b731); /* Azul e amarelo */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Borda sutil */
     border-radius: 15px;
     margin: 20px auto;
     padding: 20px;
     text-align: justify;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3); /* Sombra futurista */
+    position: relative;
+    z-index: 1;
 }
 
 h2 {
     text-align: center;
+    font-size: 28px;
+    color: #ff6f61; /* Laranja para títulos */
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-/* Estilos da tabela */
+p {
+    color: #ffffff; /* Branco para parágrafos */
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* Botões Futuristas */
+button {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    background: linear-gradient(90deg, #f7b731, #ff6f61); /* Amarelo e laranja */
+    border: none;
+    border-radius: 25px; /* Bordas arredondadas futuristas */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3); /* Sombra leve */
+}
+
+button:hover {
+    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5); /* Sombra mais pronunciada */
+}
+
+/* Tabelas Futuristas */
 table {
-    width: 50%;
+    width: 80%;
     border-collapse: collapse;
     margin: 20px auto;
+    background: linear-gradient(135deg, #4a90e2, #f7b731); /* Azul e amarelo */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Borda sutil */
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3); /* Sombra futurista */
+    overflow: hidden;
 }
 
 th, td {
-    border: 1px solid black;
-    padding: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Borda sutil */
+    padding: 12px;
     text-align: center;
+    color: #ffffff; /* Branco para texto */
+    transition: background-color 0.3s ease;
 }
 
 th {
-    background-color: #333;
+    background: linear-gradient(90deg, #f7b731, #ff6f61); /* Amarelo e laranja */
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+td:hover {
+    background: rgba(255, 255, 255, 0.1); /* Destaque ao passar o mouse */
+}
+
+/* Classes de Cores para Tabelas */
+.laranja {
+    background: linear-gradient(90deg, #ff6f61, #f7b731);
     color: white;
 }
 
-.laranja {
-    background-color: orange;
-}
-
 .preta {
-    background-color: rgb(29, 29, 29);
+    background: linear-gradient(90deg, #4a90e2, #000000);
     color: white;
 }
 
 .roxa {
-    background-color: purple;
+    background: linear-gradient(90deg, #6a11cb, #4a90e2);
     color: white;
 }
 
 .verde {
-    background-color: green;
+    background: linear-gradient(90deg, #2bce98, #00bfa5);
     color: white;
 }
 
 .vermelha {
-    background-color: rgb(233, 69, 69);
+    background: linear-gradient(90deg, #e53935, #d32f2f);
     color: white;
 }
 
 .em-breve {
-    color: red;
+    color: #ff0000;
+    font-weight: bold;
+    animation: blink 1s infinite; /* Animação de piscar */
 }
-.home:hover{
-    border-radius: 5px;
-    color: #00aeff;
 
+/* Animação para "EM BREVE" */
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Estilo para o contêiner do link e da imagem */
+#eer {
     
+    position: relative; /* Permite posicionar elementos dentro deste contêiner */
+    display: inline-block; /* Garante que o contêiner tenha o tamanho da imagem */
 }
 
-.img:hover{
-    border-radius: 10px;
-    opacity: 80%;
-
+/* Estilo para o link (a) */
+#eer a {
+    
+    position: absolute; /* Posiciona o link absolutamente dentro do contêiner */
+    top: 0;
+    left: 0;
+    width: 100px; /* Mesma largura da imagem */
+    height: 100px; /* Mesma altura da imagem */
+    background: transparent; /* Remove qualquer fundo visível */
+    border: none; /* Remove bordas */
+    padding: 0; /* Remove espaçamento interno */
+    margin: 0; /* Remove espaçamento externo */
+    z-index: 1; /* Coloca o link atrás da imagem */
+    text-decoration: none; /* Remove sublinhado */
 }
-#image {
-    background-color: #000000;
-    position: relative;
-    width: 120px; /* Igual à largura da imagem */
-    height: 120px; /* Para manter a imagem centralizada */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 15px; /* Igual ao da imagem */
+
+/* Estilo para a imagem dentro do link */
+#eer img {
+    position: relative; /* Posiciona a imagem em relação ao contêiner */
+    width: 100px; /* Largura da imagem */
+    height: 100px; /* Altura da imagem */
+    border-radius: 15px; /* Bordas arredondadas */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5); /* Sombra futurista */
+    transition: transform 0.3s ease; /* Transição suave para efeito hover */
+    z-index: 2; /* Coloca a imagem na frente do link */
+    pointer-events: none; /* Faz a imagem ignorar cliques, permitindo que o link seja clicado */
 }
 
-.campos {
-    margin-bottom: 3%;
-
-
-
-}
-button {
-
-    color: whitesmoke;
-    text-decoration: none;
-    padding: 10px 15px;
-    font-size: 18px;
-    background: #0056b3;
-    border-radius: 15px;
+/* Efeito de hover na imagem */
+#eer img:hover {
+    transform: scale(1.1); /* Aumenta o tamanho da imagem ao passar o mouse */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.7); /* Sombra mais pronunciada */
     
 }
