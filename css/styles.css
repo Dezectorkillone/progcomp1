@@ -1,274 +1,405 @@
 /* Estilo Geral */
 body {
-    font-family: 'Poppins', sans-serif; /* Fonte moderna e limpa */
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #f7b731, #4a90e2); /* Fundo com amarelo e azul */
-    color: #ffffff; /* Texto branco para contraste */
-    text-align: center;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1" width="100" height="100"/></svg>') repeat, #f5f7fa;
+    color: #333;
     line-height: 1.6;
 }
 
-/* Cabeçalho Futurista */
+/* Cabeçalho Moderno */
 header {
-    background: linear-gradient(90deg, #f7b731, #ff6f61); /* Amarelo e laranja */
-    color: whitesmoke;
-    padding: 20px 0;
+    background: linear-gradient(135deg, #3498db, #2ecc71);
+    color: white;
+    padding: 35px 0;
     text-align: center;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Sombra mais pronunciada */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     position: relative;
-    z-index: 10;
+    overflow: hidden;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"/></svg>') repeat;
+    opacity: 0.5;
+    z-index: 0;
 }
 
 .header-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    gap: 10px;
+    gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
 }
 
 .logo {
     width: 120px;
     height: auto;
-    border-radius: 10px; /* Bordas arredondadas suaves */
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5); /* Sombra futurista */
-    animation: pulse 2s infinite; /* Animação sutil */
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+.logo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
 }
 
 .header-text h1 {
-    font-size: 36px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    margin: 5px 0;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra no texto */
+    font-size: 38px;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .subtitle {
     font-size: 18px;
-    font-style: italic;
-    color: #d4d4d4; /* Cinza claro para o subtítulo */
-    opacity: 0.9;
-    margin-top: -5px;
+    color: rgba(255, 255, 255, 0.95);
+    margin: 8px 0 0;
+    letter-spacing: 0.5px;
 }
 
-/* Animação para o logo */
-@keyframes pulse {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.05);
-    }
-}
-
-/* Menu Futurista */
+/* Menu Atraente */
 nav {
-    background: linear-gradient(90deg, #4a90e2, #f7b731); /* Azul e amarelo */
-    padding: 10px;
+    background: linear-gradient(to right, #2c3e50, #1a2533);
+    padding: 15px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: sticky;
     top: 0;
-    z-index: 10;
+    z-index: 100;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 #link-menu {
     display: flex;
-    gap: 25px;
+    flex-wrap: wrap;
+    gap: 12px;
 }
 
 nav a {
-    color: #ffffff;
+    color: white;
     text-decoration: none;
-    padding: 10px 15px;
-    font-size: 16px;
-    background: linear-gradient(90deg, #f7b731, #ff6f61); /* Amarelo e laranja */
-    border-radius: 25px; /* Bordas arredondadas futuristas */
+    padding: 10px 18px;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 5px;
     transition: all 0.3s ease;
-    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3); /* Sombra leve */
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid transparent;
 }
 
 nav a:hover {
-    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5); /* Sombra mais pronunciada */
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* Ajuste da imagem do menu */
-img {
-    width: 100px;
-    height: 100px;
-    border-radius: 15px;
-    margin-right: 20px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5); /* Sombra futurista */
-    transition: all 0.3s ease;
+/* Logo no menu */
+#eer img {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    transition: all 0.4s ease;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-img:hover {
-    transform: rotate(10deg); /* Rotação sutil ao passar o mouse */
+#eer img:hover {
+    transform: rotate(15deg) scale(1.1);
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 /* Conteúdo Principal */
 .container {
-    width: 80%;
-    background: linear-gradient(135deg, #4a90e2, #f7b731); /* Azul e amarelo */
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Borda sutil */
-    border-radius: 15px;
-    margin: 20px auto;
-    padding: 20px;
-    text-align: justify;
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3); /* Sombra futurista */
+    max-width: 1000px;
+    background: white;
+    border-radius: 10px;
+    margin: 30px auto;
+    padding: 35px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
     position: relative;
-    z-index: 1;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #3498db, #2ecc71);
+    border-radius: 10px 10px 0 0;
 }
 
 h2 {
+    color: #2c3e50;
+    font-size: 30px;
+    margin-bottom: 25px;
     text-align: center;
-    font-size: 28px;
-    color: #ff6f61; /* Laranja para títulos */
-    margin-bottom: 15px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    position: relative;
+    padding-bottom: 15px;
 }
 
-p {
-    color: #ffffff; /* Branco para parágrafos */
+h2:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #3498db, #2ecc71);
+    border-radius: 2px;
+}
+
+/* Formulário de Calculadora */
+form {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.campos {
+    margin-bottom: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.campos label {
+    display: block;
+    margin-bottom: 8px;
+    color: #2c3e50;
+    font-weight: 500;
     font-size: 16px;
-    line-height: 1.8;
 }
 
-/* Botões Futuristas */
+.campos input[type="number"],
+.campos select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background-color: #f9f9f9;
+    color: #333;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.campos input[type="number"]:focus,
+.campos select:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+    outline: none;
+}
+
+.campos select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%232c3e50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>');
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 16px;
+    padding-right: 45px;
+}
+
+/* Grid para campos do formulário */
+@media (min-width: 768px) {
+    form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .campos:last-child {
+        grid-column: span 2;
+        margin-top: 15px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+/* Botão de Calcular */
 button {
-    color: #ffffff;
-    text-decoration: none;
-    padding: 10px 15px;
-    font-size: 16px;
-    background: linear-gradient(90deg, #f7b731, #ff6f61); /* Amarelo e laranja */
+    background: linear-gradient(135deg, #3498db, #2ecc71);
+    color: white;
     border: none;
-    border-radius: 25px; /* Bordas arredondadas futuristas */
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3); /* Sombra leve */
-}
-
-button:hover {
-    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5); /* Sombra mais pronunciada */
-}
-
-/* Tabelas Futuristas */
-table {
-    width: 80%;
-    border-collapse: collapse;
-    margin: 20px auto;
-    background: linear-gradient(135deg, #4a90e2, #f7b731); /* Azul e amarelo */
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Borda sutil */
-    border-radius: 10px;
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3); /* Sombra futurista */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
     overflow: hidden;
 }
 
-th, td {
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Borda sutil */
-    padding: 12px;
-    text-align: center;
-    color: #ffffff; /* Branco para texto */
-    transition: background-color 0.3s ease;
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
-th {
-    background: linear-gradient(90deg, #f7b731, #ff6f61); /* Amarelo e laranja */
-    color: #ffffff;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-td:hover {
-    background: rgba(255, 255, 255, 0.1); /* Destaque ao passar o mouse */
-}
-
-/* Classes de Cores para Tabelas */
-.laranja {
-    background: linear-gradient(90deg, #ff6f61, #f7b731);
-    color: white;
-}
-
-.preta {
-    background: linear-gradient(90deg, #4a90e2, #000000);
-    color: white;
-}
-
-.roxa {
-    background: linear-gradient(90deg, #6a11cb, #4a90e2);
-    color: white;
-}
-
-.verde {
-    background: linear-gradient(90deg, #2bce98, #00bfa5);
-    color: white;
-}
-
-.vermelha {
-    background: linear-gradient(90deg, #e53935, #d32f2f);
-    color: white;
-}
-
-.em-breve {
-    color: #ff0000;
-    font-weight: bold;
-    animation: blink 1s infinite; /* Animação de piscar */
-}
-
-/* Animação para "EM BREVE" */
-@keyframes blink {
-    0%, 100% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
-    }
-}
-
-/* Estilo para o contêiner do link e da imagem */
-#eer {
-    
-    position: relative; /* Permite posicionar elementos dentro deste contêiner */
-    display: inline-block; /* Garante que o contêiner tenha o tamanho da imagem */
-}
-
-/* Estilo para o link (a) */
-#eer a {
-    
-    position: absolute; /* Posiciona o link absolutamente dentro do contêiner */
+button::after {
+    content: '';
+    position: absolute;
     top: 0;
     left: 0;
-    width: 100px; /* Mesma largura da imagem */
-    height: 100px; /* Mesma altura da imagem */
-    background: transparent; /* Remove qualquer fundo visível */
-    border: none; /* Remove bordas */
-    padding: 0; /* Remove espaçamento interno */
-    margin: 0; /* Remove espaçamento externo */
-    z-index: 1; /* Coloca o link atrás da imagem */
-    text-decoration: none; /* Remove sublinhado */
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transform: translateX(-100%);
+    transition: 0.6s;
 }
 
-/* Estilo para a imagem dentro do link */
-#eer img {
-    position: relative; /* Posiciona a imagem em relação ao contêiner */
-    width: 100px; /* Largura da imagem */
-    height: 100px; /* Altura da imagem */
-    border-radius: 15px; /* Bordas arredondadas */
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5); /* Sombra futurista */
-    transition: transform 0.3s ease; /* Transição suave para efeito hover */
-    z-index: 2; /* Coloca a imagem na frente do link */
-    pointer-events: none; /* Faz a imagem ignorar cliques, permitindo que o link seja clicado */
+button:hover::after {
+    transform: translateX(100%);
 }
 
-/* Efeito de hover na imagem */
-#eer img:hover {
-    transform: scale(1.1); /* Aumenta o tamanho da imagem ao passar o mouse */
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.7); /* Sombra mais pronunciada */
+/* Resultado */
+#soma {
+    font-size: 20px;
+    font-weight: 600;
+    color: #2c3e50;
+    padding: 12px 20px;
+    border-radius: 8px;
+    background-color: #f0f7ff;
+    border-left: 4px solid #3498db;
+    display: inline-block;
+    min-width: 200px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Estilo para cores de equipes no select */
+#equipe option[value="Laranja"] {
+    background-color: #f39c12;
+    color: white;
+}
+
+#equipe option[value="Preta"] {
+    background-color: #34495e;
+    color: white;
+}
+
+#equipe option[value="Roxo"] {
+    background-color: #9b59b6;
+    color: white;
+}
+
+#equipe option[value="Verde"] {
+    background-color: #2ecc71;
+    color: white;
+}
+
+#equipe option[value="Vermelho"] {
+    background-color: #e74c3c;
+    color: white;
+}
+
+/* Ajustes para o contêiner do link e da imagem */
+#eer {
+    position: relative;
+    display: inline-block;
+}
+
+#eer a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    z-index: 10;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #link-menu {
+        justify-content: center;
+    }
     
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .header-text h1 {
+        font-size: 28px;
+    }
+    
+    .subtitle {
+        font-size: 16px;
+    }
+    
+    #eer {
+        margin-top: 10px;
+    }
+    
+    form {
+        display: block;
+    }
+    
+    .campos:last-child {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    #soma {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+/* Animação para imagem rotativa */
+#rotating-image {
+    transition: transform 0.6s ease;
+}
+
+#rotating-image:hover {
+    transform: rotate(360deg) scale(1.1);
+}
+
+/* Animação para inputs com foco */
+@keyframes pulse-border {
+    0% {
+        border-color: #3498db;
+    }
+    50% {
+        border-color: #2ecc71;
+    }
+    100% {
+        border-color: #3498db;
+    }
+}
+
+.campos input:focus {
+    animation: pulse-border 2s infinite;
 }
