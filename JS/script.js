@@ -1,6 +1,6 @@
 function calcular(){
    
-    let mascote, homenagem, leite, kit, suplemento, oleo, feijao2, feijao1, arroz5, arroz1, macarrao, soma, equipe
+    let mascote, homenagem, leite, kit, suplemento, oleo, feijao2, feijao1, arroz5, arroz1, macarrao, soma, equipe, sangue
 
     mascote = Number(document.getElementById("mascote").value)
     homenagem = Number(document.getElementById("homenagem").value)
@@ -14,6 +14,7 @@ function calcular(){
     arroz1 = Number(document.getElementById("arroz1").value)
     macarrao = Number(document.getElementById("macarrao").value)
     equipe = document.getElementById("equipe").value
+    sangue = Number (document.getElementById("sangue").value)
      soma = (mascote) + (homenagem) + (2 *(leite)) +(oleo) +  (2 * (feijao2)) + (feijao1) + (5 *(arroz5)) +(arroz1) + (0.5 *(macarrao))
     if(equipe == "Laranja"){
             if(kit>= 97 && suplemento >= 49){
@@ -27,8 +28,31 @@ function calcular(){
             }
             else if (kit>= 19 && suplemento >= 10){
                 soma = soma + 1000 + ((kit - 19) * 30) + ((suplemento - 10)*15)
-        }
-    }
+             }
+             
+             if  (sangue>=97){
+             soma = soma + 2500 +((sangue-49)*20)
+              }
+             else {
+                soma = soma + (sangue*20)
+                 }
+    
+}    
+    else if (equipe == "Preta"){
+        if  (sangue>=53){
+            soma = soma + 2500 +((sangue-49)*20)
+             }
+            else {
+               soma = soma + (sangue*20)
+                }
    
+    }
+    else if (equipe == "Roxa"){
+    }
+    else if (equipe == "Verde"){
+    }
+    else if (equipe == "Vermelha"){
+    }
     document.getElementById("soma").innerHTML = `Seu time é ${equipe} e a soma é ${soma}`
+
 }
