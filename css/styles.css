@@ -403,3 +403,198 @@ button:hover::after {
 .campos input:focus {
     animation: pulse-border 2s infinite;
 }
+/* Estilos para Tabelas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    background-color: white;
+}
+
+thead {
+    background: linear-gradient(135deg, #2c3e50, #1a2533);
+    color: white;
+}
+
+th {
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.2);
+}
+
+td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eaeaea;
+    font-size: 15px;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.025);
+}
+
+/* Cores específicas para cada equipe */
+tr.laranja {
+    background-color: rgba(243, 156, 18, 0.1);
+    border-left: 4px solid #f39c12;
+}
+
+tr.laranja:hover {
+    background-color: rgba(243, 156, 18, 0.2);
+}
+
+tr.laranja td:first-child {
+    font-weight: 600;
+    color: #e67e22;
+}
+
+tr.preta {
+    background-color: rgba(52, 73, 94, 0.1);
+    border-left: 4px solid #34495e;
+}
+
+tr.preta:hover {
+    background-color: rgba(52, 73, 94, 0.2);
+}
+
+tr.preta td:first-child {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+tr.roxa {
+    background-color: rgba(155, 89, 182, 0.1);
+    border-left: 4px solid #9b59b6;
+}
+
+tr.roxa:hover {
+    background-color: rgba(155, 89, 182, 0.2);
+}
+
+tr.roxa td:first-child {
+    font-weight: 600;
+    color: #8e44ad;
+}
+
+tr.verde {
+    background-color: rgba(46, 204, 113, 0.1);
+    border-left: 4px solid #2ecc71;
+}
+
+tr.verde:hover {
+    background-color: rgba(46, 204, 113, 0.2);
+}
+
+tr.verde td:first-child {
+    font-weight: 600;
+    color: #27ae60;
+}
+
+tr.vermelha {
+    background-color: rgba(231, 76, 60, 0.1);
+    border-left: 4px solid #e74c3c;
+}
+
+tr.vermelha:hover {
+    background-color: rgba(231, 76, 60, 0.2);
+}
+
+tr.vermelha td:first-child {
+    font-weight: 600;
+    color: #c0392b;
+}
+
+/* Cabeçalhos de tabelas específicas por equipe */
+table.laranja thead {
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+}
+
+table.preta thead {
+    background: linear-gradient(135deg, #34495e, #2c3e50);
+}
+
+table.roxa thead {
+    background: linear-gradient(135deg, #9b59b6, #8e44ad);
+}
+
+table.verde thead {
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+}
+
+table.vermelha thead {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+}
+
+/* Classe para células em destaque */
+.em-breve {
+    font-style: italic;
+    color: #7f8c8d;
+    text-align: center;
+    font-weight: 500;
+    background-color: rgba(236, 240, 241, 0.5);
+}
+
+.meta {
+    font-weight: 700;
+    background-color: rgba(52, 152, 219, 0.1);
+}
+
+/* Estilo responsivo para tabelas */
+@media (max-width: 768px) {
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    
+    th, td {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+    
+    /* Cabeçalho fixo para rolagem horizontal */
+    thead {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+    
+    tr[class] td:first-child {
+        position: sticky;
+        left: 0;
+        z-index: 2;
+        background-color: inherit;
+        box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    }
+}
+
+/* Estilos para tabelas especiais (pontuações, metas, etc.) */
+table.info-table {
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+}
+
+table.info-table th {
+    background: linear-gradient(to right, #3498db, #2980b9);
+    text-align: center;
+}
+
+/* Animação para destacar alterações de pontuação */
+@keyframes highlight-row {
+    0% { background-color: rgba(255, 255, 0, 0.3); }
+    100% { background-color: transparent; }
+}
+
+.highlight-row {
+    animation: highlight-row 2s ease-out;
+}

@@ -14,7 +14,7 @@ function calcular(){
     arroz1 = Number(document.getElementById("arroz1").value)
     macarrao = Number(document.getElementById("macarrao").value)
     equipe = document.getElementById("equipe").value
-     soma = (mascote) + (homenagem) + (2 *(leite)) + (kit)+(oleo) + (suplemento) + (2 * (feijao2)) + (feijao1) + (5 *(arroz5)) +(arroz1) + (0.5 *(macarrao))
+     soma = (mascote) + (homenagem) + (2 *(leite)) +(oleo) +  (2 * (feijao2)) + (feijao1) + (5 *(arroz5)) +(arroz1) + (0.5 *(macarrao))
     if(equipe == "Laranja"){
             if(kit>= 97 && suplemento >= 49){
              soma = soma + 5000 + (( kit - 97 ) * 30) + ((suplemento - 49)*15)
