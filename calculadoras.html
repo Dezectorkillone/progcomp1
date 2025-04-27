@@ -26,10 +26,10 @@
                 <a href="intro.html" class="menu-item">Introdução</a>
                 <a href="objetivo.html" class="menu-item">Objetivos</a>
                 <a href="formato.html" class="menu-item">Formato</a>
-                <a href="gincana.html" class="menu-item">Gincana</a>
+                <a href="gincana.html" class="menu-item">Gincana Acadêmica</a>
                 <a href="integracao.html" class="menu-item">Integração Estudantil</a>
                 <a href="observacoes.html" class="menu-item">Observações Gerais</a>
-                <a href="calculadoras.html" class="menu-item">Calculadora</a>
+                <a href="calculadoras.html" class="menu-item">Recursos e Ferramentas</a>
             </div>
             <div id="eer">
                 <a href="https://www.unifacef.com.br/extensao/trote-solidario/" target="_blank" aria-label="Site oficial do Trote Solidário"></a>
@@ -43,12 +43,12 @@
             <form id="calculadora-form">
                 <div class="campos">
                     <label for="equipe">Selecione a cor da equipe</label>
-                    <select id="equipe" name="equipe">
+                    <select id="equipe" name="equipe" onchange="mudarCor(this)">
                         <option value="Laranja">Laranja</option>
                         <option value="Preta">Preta</option>
-                        <option value="Roxo">Roxo</option>
+                        <option value="Roxa">Roxa</option>
                         <option value="Verde">Verde</option>
-                        <option value="Vermelho">Vermelho</option>
+                        <option value="Vermelha">Vermelha</option>
                     </select>
                 </div>
                 
@@ -61,6 +61,11 @@
                     <label for="homenagem">Homenagem a um atleta</label>
                     <input type="number" id="homenagem" name="homenagem" min="0" placeholder="Quantidade"/>
                 </div>
+
+                <div class="campos">
+                    <label for="animacao">Animação</label>
+                    <input type="number" id="animacao" name="animacao" min="0" placeholder="Quantidade"/>
+                </div>
                 
                 <div class="campos">
                     <label for="kit">Quantidade de Kits</label>
@@ -70,6 +75,11 @@
                 <div class="campos">
                     <label for="suplemento">Quantidade de latas de suplemento</label>
                     <input type="number" id="suplemento" name="suplemento" min="0" placeholder="Quantidade"/>
+                </div>
+
+                <div class="campos">
+                    <label for="sangue">Quantidade de doações de sangue</label>
+                    <input type="number" id="sangue" name="sangue" min="0" placeholder="Quantidade"/>
                 </div>
                 
                 <div class="campos">
@@ -103,12 +113,27 @@
                 </div>
                 
                 <div class="campos">
-                    <label for="macarrao">Doações de sangue</label>
-                    <input type="number" id="sangue" name="sangue" min="0" placeholder="Quantidade"/>
+                    <label for="macarrao">Quantidade de pacotes de macarrão</label>
+                    <input type="number" id="macarrao" name="macarrao" min="0" placeholder="Quantidade"/>
+                </div>
+
+                <div class="campos">
+                    <label for="acaoSocial">Ação social</label>
+                    <input type="number" id="acaoSocial" name="acaoSocial" min="0" placeholder="Quantidade"/>
+                </div>
+
+                <div class="campos">
+                    <label for="fotoAs">Fotos de ações sociais</label>
+                    <input type="number" id="fotoAs" name="fotoAs" min="0" placeholder="Quantidade"/>
+                </div>
+
+                <div class="campos">
+                    <label for="fotoAcao">Fotos de ações</label>
+                    <input type="number" id="fotoAcao" name="fotoAcao" min="0" placeholder="Quantidade"/>
                 </div>
 
                 <div class="campos resultado">
-                    <button type="button" onclick="calcular()">Calcular Pontuação</button>
+                    <button type="button" onclick="calcular(); mudarTexto(this)">Calcular Pontuação</button>
                     <label id="soma">Resultado aparecerá aqui</label>
                 </div>
             </form>
